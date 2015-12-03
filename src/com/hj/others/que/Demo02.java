@@ -1,4 +1,4 @@
-package com.hj;
+package com.hj.others.que;
 
 /**
  * 测试自定义堆栈

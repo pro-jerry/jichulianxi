@@ -1,4 +1,4 @@
-package com.hj;
+package com.hj.others.que;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
