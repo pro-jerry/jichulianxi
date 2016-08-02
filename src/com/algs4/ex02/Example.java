@@ -41,6 +41,28 @@ public class Example {
 	}
 	
 	/**
+	 * shell排序
+	 * @param a
+	 */
+	public static void shellSort(Comparable[] a){
+		
+		int N = a.length;
+		int h=1;
+		while(h<N/3) h = 3*h+1;//1,4,13,40,121
+		while(h>=1){
+			//将数组变为h有序
+			for(int i=h;i<N;i++){
+				//将a[i]插入到a[i-h],a[i-2*h],a[i-3*h]..之中
+				for(int j=i;j>=h&&less(a[j], a[j-h]);j-=h){
+					exch(a, i, j-h);
+				}
+			}
+			h=h/3;
+		}
+	}
+	
+	
+	/**
 	 * 插入排序动态图
 	 * @param a
 	 */
@@ -104,23 +126,8 @@ public class Example {
 	
 	public static void main(String[] args) {
 		
-		String[] a = In.readStrings("C:/Users/军/Desktop/book/算法第四版测试数据/随机double.txt");
-//		insertSort(a);
-		insertSort2D(a);
+		String[] a = In.readStrings("D:/algs4-data/words4.txt");
 		
-
-//		int N = a.length;
-//		double[] b = new double[N];
-//		for(int i=0;i<N;i++){
-//			b[i] =Double.valueOf(a[i]);
-//		}
-//		for(int i=0;i<N;i++){
-//			double x = 1.0*i/N;
-//			double y =b[i]/2.0;
-//			double rw = 0.5/N;
-//			double rh=b[i]/2.0;
-//			StdDraw.filledRectangle(x, y, rw, rh);
-//		}
 		
 	}
 	
