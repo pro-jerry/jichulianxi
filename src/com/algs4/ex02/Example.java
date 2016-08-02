@@ -3,6 +3,7 @@ package com.algs4.ex02;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class Example {
 
@@ -46,7 +47,7 @@ public class Example {
 	 */
 	public static void shellSort(Comparable[] a){
 		
-		int N = a.length;
+		int N = a.length;//N=20
 		int h=1;
 		while(h<N/3) h = 3*h+1;//1,4,13,40,121
 		while(h>=1){
@@ -93,12 +94,15 @@ public class Example {
 		a[j] = t;
 	}
 	
+	
 	private static void show (Comparable[] a){
 		
 		for(int i=0;i<a.length;i++)
 			System.out.println(a[i]+" ");
 		StdOut.println();
 	}
+	
+	
 	
 	private static void show2D (Comparable[] a){
 		
@@ -126,8 +130,8 @@ public class Example {
 	
 	public static void main(String[] args) {
 		
-		String[] a = In.readStrings("D:/algs4-data/words4.txt");
-		
+//		String[] a = In.readStrings("D:/algs4-data/words4.txt");
+//		shellSort(a);
 		
 	}
 	
